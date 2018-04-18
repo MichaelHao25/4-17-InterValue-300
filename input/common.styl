@@ -1,0 +1,652 @@
+@import url(reset.css)
+
+// body
+// 	&::-webkit-scrollbar
+// 		display none
+@font-face
+{
+font-family: myFont;
+src: url('../font/DINMittelschrift.ttf'),
+url('../font/DINMittelschrift.otf'),
+url('../font/DINMittelschrift.woff')
+}
+body
+	font-family myFont,arial,misrosoftYahei
+.maxw1400
+	max-width 1400px
+	margin 0 auto
+	@media(max-width 1400px)
+		padding 0 15px
+.header
+	position fixed
+	top 0
+	left 0
+	right 0
+	background #fff
+	z-index 10
+	box-shadow 0 0 3px #ccc
+	.maxw1400
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+		align-items center
+		height 90px
+		@media(max-width 1080px)
+			height 60px
+	a
+		display block
+	.brand
+		img
+			max-width 55px
+			@media(max-width 1080px)
+				max-width 40px
+	.nav
+		height @height
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		justify-content flex-end
+		a
+			margin 0 10px
+			padding 0 12px
+			font-size 14px
+			color #fff
+			line-height 28px
+			background #3d3939
+			border-radius 5px
+		.toggle-menu
+			margin-left 30px
+			display block
+
+.main
+	.banner
+		padding-top 90px
+		height 835px
+		box-sizing border-box
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		flex-direction column
+		align-items center
+		justify-content center
+		background #1c1c1c url() center top no-repeat
+		color #fff
+		line-height 1
+		text-align center
+		@media(max-width 1080px)
+			padding-top 60px
+		@media(max-width 720px)
+			height 600px
+		h2
+			font-size 88px
+			padding-bottom 140px
+			font-weight bold
+			@media(max-width 720px)
+				font-size 60px
+				padding-bottom 50px
+		h4
+			padding-bottom 29px
+			font-size 20px
+			@media(max-width 720px)
+				font-size 16px
+			@media(max-width 600px)
+				font-size 12px
+				line-height 1.5
+		p
+			font-size 24px
+			padding-bottom 12px
+			font-weight bold
+			@media(max-width 720px)
+				font-size 20px
+			@media(max-width 600px)
+				font-size 16px
+				line-height 1.5
+		h5
+			padding-top 18px
+			font-size 22px
+			padding-bottom 50px
+			@media(max-width 720px)
+				font-size 18px
+			@media(max-width 600px)
+				font-size 14px
+				line-height 1.5
+		a
+			width 300px
+			height 56px
+			font-size 18px
+			text-align center
+			line-height @height
+			border 1px solid #fff
+			transition 0.3s
+			border-radius 8px
+			&:hover
+				background #2fa1d2
+				border-color #2fa1d2
+			// @media(max-width 1080px)
+			// 	width 240px
+			// 	height 50px
+			// 	line-height @height
+	
+	.key-features
+		h3
+			font-size 38px
+			color #282828
+			padding 105px 0
+			text-align center
+		.list
+			max-width calc(445px * 4)
+			width 100%
+			margin 0 auto
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content center
+			flex-wrap wrap
+			align-content center
+			.item
+				position relative
+				flex 0 0 25%
+				height 445px
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				align-items center
+				justify-content center
+				flex-direction column
+				transition 0.3s
+				@media(max-width 1500px)
+					flex 0 0 33.33%
+				@media(max-width 1200px)
+					flex 0 0 50%
+				@media(max-width 700px)
+					flex 0 0 100%
+				&:hover
+					.layout
+						background #2fa1d2		
+						&>*
+							transform translateY(0)
+							opacity 1
+				.pic
+					height 140px
+					width 140px
+					display -webkit-flex
+					display -moz-flex
+					display -ms-flex
+					display -o-flex
+					display flex
+					align-items center
+					justify-content center
+				.title
+					padding-top 30px
+					text-align center
+					font-size 18px
+					color #282828
+					line-height 2
+					h4
+						font-weight bold
+				.layout
+					position absolute
+					top 0
+					bottom 0
+					left 0
+					right 0
+					display -webkit-flex
+					display -moz-flex
+					display -ms-flex
+					display -o-flex
+					display flex
+					align-items center
+					justify-content center
+					flex-direction column
+					color #fff
+					background rgba(0,0,0,0)
+					transition 0.3s
+					&>*
+						transition 0.3s
+						transform translateY(30px)
+						opacity 0
+					img
+						max-width 40px
+						display block
+						margin-bottom 30px
+					h3
+						font-size 18px
+						line-height 2
+						padding 0
+						margin 0
+						color #fff
+					p
+						max-width 90%
+						margin 0 auto
+						padding-top 50px
+						text-align center
+						font-size 14px
+						line-height 22px
+	
+	.common-industry-support
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+		align-items center
+		height 195px
+		border-top 1px solid #e1e1e1
+		border-bottom 1px solid #e1e1e1
+		@media(max-width 500px)
+			height 150px
+		a
+			font-size 18px
+			color #282828
+			padding-left 100px
+			line-height 80px
+			font-weight bold
+			text-transform uppercase
+			background url('../img/29f1e69ed5a6151fa6aa7d9733fbd6f8.png') left center/auto 100% no-repeat
+			@media(max-width 500px)
+				padding-left 70px
+				line-height 60px
+				font-size 14px
+	.white-paper
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+		align-items center
+		height 270px
+		background #eeeff3 url('../img/f2f05ea7e2544b72e64006fd0836c269.png') center top no-repeat
+		@media(max-width 500px)
+			height 150px
+		a
+			width 300px
+			height 56px
+			border 1px solid #2fa1d2
+			line-height 56px
+			text-align center
+			color #2fa1d2
+			border-radius 5px
+			font-weight bold
+			transition 0.3s
+			border-radius 8px
+			&:hover
+				color #fff
+				background #2fa1d2
+	.ecology
+		background #1f1f1f url('../img/8b8dd65be7e34b553b5fab1862d91682.jpg') center top no-repeat
+		text-align center
+		h3
+			padding 120px 0
+			font-size 38px
+			color #fff
+			@media(max-width 1100px)
+				padding 50px
+			@media(max-width 800px)
+				font-size 20px
+		.pic
+			padding-bottom 150px
+			@media(max-width 1100px)
+				padding-bottom 80px
+			img
+				display block
+				margin 0 auto
+				max-width 1054px
+				width 100%
+				@media(max-width 1100px)
+					padding 0 15px
+					box-sizing border-box
+	.roadmap
+		h3
+			font-size 28px
+			color #282828
+			line-height 1
+			padding 120px 0
+			text-align center
+			@media(max-width 1100px)
+				padding 50px 0
+			@media(max-width 800px)
+				font-size 20px
+		.pic
+			padding-bottom 170px
+			@media(max-width 1100px)
+				padding-bottom 80px
+			img
+				display block
+				margin 0 auto
+				max-width 1550px
+				width 100%
+				@media(max-width 1600px)
+					padding 0 15px
+					box-sizing border-box
+				
+	.bg
+		background linear-gradient(to right,#1d1d1d 50%,#ffff 50%) left top/100% 100% no-repeat
+		@media(max-width 1800px)
+			background #1d1d1d
+	.hcl-row
+		max-width calc(445px * 4)
+		width 100%
+		margin 0 auto
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex			
+		flex-wrap wrap
+		.hcl-column
+			flex 0 0 50%
+			max-width 890px
+			width 100%
+			@media(max-width 1800px)
+				flex 0 0 100%
+				max-width 100%
+				padding-bottom 100px
+			&+.hcl-column
+				background #fff
+				@media(max-width 1800px)
+					padding-bottom 0
+				h3
+					color #282828
+				.item
+					h4
+					p
+					a
+						color #282828
+					a
+						border 1px solid #282828
+			h3
+				padding-top 100px
+				text-transform uppercase
+				font-size 38px
+				color #fff
+				font-weight normal
+				text-align center
+				line-height 1
+				@media(max-width 800px)
+					font-size 20px
+					padding-top 50px
+			.wrap
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				width 100%
+				flex-wrap wrap
+				.item
+					flex 0 0 33.33%
+					@media(max-width 900px)
+						flex 0 0 50%
+					@media(max-width 600px)
+						flex 0 0 100%
+			.swiper-container
+				padding-bottom 120px
+			.swiper-pagination
+				font-size 0
+				bottom 50px
+				span
+					width 18px
+					height 18px
+					opacity 1
+					background #c3c3c3
+					&.swiper-pagination-bullet-active
+						background #3d3939
+			@media(max-width 600px)
+				.swiper-slide-active
+					.item
+						.pic
+							img
+								transform-origin center bottom
+								transform scale(1.2,1.2)
+								filter grayscale(0)	
+								transition 0.3s 0.3s
+			.item
+				padding-top 95px
+				text-align center
+				color #fff
+				cursor pointer
+				@media(max-width 800px)
+					padding-top 50px
+				// &:hover
+				// 	.pic
+				// 		img
+				.pic
+					img
+						display block
+						max-width 160px
+						width 100%
+						margin 0 auto
+						filter grayscale(1)
+						transition 0.3s
+						border-radius 50%
+						&:hover
+							transform-origin center bottom
+							transform scale(1.2,1.2)
+							filter grayscale(0)	
+				h4
+					font-size 18px
+					line-height 1
+					padding 20px 0
+				p
+					font-size 14px
+					line-height 1.5
+				a
+					display block
+					margin 30px auto 0
+					width 100px
+					height 28px
+					font-size 14px
+					line-height 28px
+					text-align center
+					border 1px solid #fff
+					transition 0.3s
+					border-radius 5px
+					&:hover
+						background #2fa1d2
+						border-color #2fa1d2
+						color #fff
+
+.footer
+	.share
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+		align-items center
+		height 135px
+		background #282828
+		@media(max-width 800px)
+			height 100px
+		a
+			margin 0 8px
+			img
+				display block
+				max-width 40px
+				width 100%
+				filter grayscale(1)
+				transition 0.3s
+			&:hover
+				img
+					filter grayscale(0)
+	.mail
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		height 135px
+		align-items center
+		justify-content center
+		background #252525
+		
+		@media(max-width 800px)
+			height 100px
+		a
+			font-size 14px
+			color #9d9d9d
+			text-transform uppercase
+			span
+				color #fff
+				text-transform none
+	.copy-right
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		justify-content center
+		height 69px
+		font-size 14px
+		color #5c5c5c
+		background #1a1b1d
+		
+		@media(max-width 800px)
+			height 50px
+		span
+			padding-left 50px
+			line-height 32px
+			height 32px
+			background url('../img/420af2acd120e488e41ced4a3403a760.png') left center/auto 100% no-repeat
+		
+
+
+.full-screen
+	// position relative
+	// position fixed
+	// top 0
+	// bottom 0
+	// left 0
+	// right 0
+	.wrap
+		position fixed
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		max-width 1628px
+		width 95%
+		box-sizing border-box
+		background #fff
+		border-radius 5px
+		z-index 12
+		display none
+		@media(max-width 1500px)
+			max-width 1200px
+		@media(max-width 800px)
+			padding 15px
+	.close
+		position absolute
+		top 40px
+		right 40px
+		width 58px
+		z-index 100
+		padding 10px
+		@media(max-width 1500px)
+			top 30px
+			right 30px
+			width 50px
+		@media(max-width 800px)
+			right 20px
+			top 20px
+			width 30px
+		img
+			display block
+			width 100%
+	.content
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		margin 0 auto
+		&:focus
+			border none
+			outline none
+		@media(max-width 1100px)
+			flex-direction column
+			max-height 80vh
+			overflow scroll
+			padding-top 5vh
+			-webkit-overflow-scrolling touch
+			// &::-webkit-scrollbar
+			// 	display none
+		@media(max-width 800px)
+			padding-top 0
+			display block
+		.text
+			flex 0 0 64%
+			width 100%
+			padding 70px
+			box-sizing border-box
+			@media(max-width 1500px)
+				padding 50px
+			@media(max-width 1100px)
+				flex 0 0 100%
+			@media(max-width 800px)
+				padding 0
+			h3
+				font-size 38px
+				color #282828
+				line-height 70px
+				padding-bottom 40px
+				@media(max-width 1500px)
+					font-size 30px
+					line-height 40px
+				@media(max-width 800px)
+					padding-bottom 15px
+					font-size 30px
+			p
+				font-size 24px
+				color #282828
+				line-height 50px
+				@media(max-width 1500px)
+					line-height 40px
+				@media(max-width 1100px)
+					line-height 50px
+				@media(max-width 1100px)
+					font-size 20px
+					line-height 1.5
+		.pic
+			flex 0 0 36%
+			display block
+			@media(max-width 1100px)
+				flex 0 0 100%
+				max-width 100%
+			img
+				display block
+				max-width 600px
+				width 100%
+				margin 0 auto
+				@media(max-width 800px)
+					max-width 400px
+
+body.active
+	position fixed
+	left 0
+	right 0
+
+.layout-no-touch
+	position fixed
+	top 0
+	bottom 0
+	left 0
+	right 0
+	display none
+	background rgba(0,0,0,0.7)
+	z-index 11
